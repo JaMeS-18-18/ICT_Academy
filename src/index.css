@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.black-gradient {
+  background: linear-gradient(90deg, #3a3a3a -14.96%, #000000 100%);
+}
