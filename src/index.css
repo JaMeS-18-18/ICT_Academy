@@ -7,3 +7,9 @@
 .black-gradient {
   background: linear-gradient(90deg, #3a3a3a -14.96%, #000000 100%);
 }
+
+body {
+  background-color: #F5F5F5;
+  user-select: none;
+  overflow-x: hidden;
+}

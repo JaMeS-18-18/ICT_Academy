@@ -1,0 +1,35 @@
+.kurs_btn_card {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.kurs_btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+.kurs_card {
+  width: 330px;
+  height: auto;
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 30px;
+  transition:  0.3s ease-out;
+}
+
+.kurs_card:hover {
+  color: white;
+}
+.img-round {
+  transition: 0.3s;
+}
+
+.kurs_card:hover .img-round {
+  top: -40%;
+  transform: rotate(90deg);
+}

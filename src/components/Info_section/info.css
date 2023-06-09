@@ -1,0 +1,13 @@
+.statistik {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 156px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}

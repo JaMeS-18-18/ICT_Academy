@@ -1,0 +1,60 @@
+.maqsadimiz {
+  width: 100%;
+  height: auto;
+  color: white;
+  border-radius: 30px;
+  padding: 8rem 6rem;
+  text-align: center;
+}
+
+.maqsad_card {
+  width: 250px;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.info_maqsad {
+  font-size: 20px;
+  margin: 4rem 0;
+}
+
+.maqsad_right {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.dots_11 {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+}
+
+.section_dotss {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.dots_22 {
+  position: absolute;
+  top: 7%;
+  right: 7%;
+}
+
+.dots_33 {
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+}
+
+.dots_44 {
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
+}

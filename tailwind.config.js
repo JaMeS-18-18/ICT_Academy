@@ -18,7 +18,8 @@ module.exports = {
       'secondary': '#323130',
       'active-color': '#8577E6',
       'border-color': '#F5F5F5',
-      'bg_gray': '#DCDEE3'
+      'bg_gray': '#DCDEE3',
+      'bg_black': '#151515'
     }
   },
   plugins: [],
