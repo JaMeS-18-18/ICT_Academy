@@ -3,8 +3,12 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
+  content: [
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
+    
+    theme: {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
@@ -22,5 +26,7 @@ module.exports = {
       'bg_black': '#151515'
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };

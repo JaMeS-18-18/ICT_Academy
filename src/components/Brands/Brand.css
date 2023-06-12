@@ -5,3 +5,16 @@
   border-radius: 20px;
   padding: 1rem;
 }
+
+.brand_title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  .brand_title {
+    font-size: 30px;
+    text-align: center;
+  }
+}

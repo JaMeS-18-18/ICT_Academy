@@ -1,10 +1,14 @@
 .kurs_btn_card {
   width: 80%;
   height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .kurs_btn_card {
+    width: 100%;
+  }
 }
 
 .kurs_btn {

@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .maqsadimiz {
+    padding: 8rem 0;
+  }
+}
+
 .maqsad_card {
   width: 250px;
   background-color: white;

@@ -1,0 +1,6 @@
+.info_news_img {
+  width: 473px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+}

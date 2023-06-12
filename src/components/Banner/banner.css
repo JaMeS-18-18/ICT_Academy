@@ -27,3 +27,9 @@
   font-weight: 600;
   z-index: 99;
 }
+
+@media (max-width: 768px) {
+  .banner_txt {
+    font-size: 30px;
+  }
+}

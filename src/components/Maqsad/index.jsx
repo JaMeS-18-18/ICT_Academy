@@ -5,8 +5,8 @@ export default function index() {
 return (
 <div>
   <div className="">
-    <div className="grid grid-cols-12">
-      <div className="col-span-6 pe-8">
+    <div className="grid grid-cols-12 ">
+      <div className="col-span-12 md:col-span-6  md:pe-8">
         <div className="maqsadimiz bg-active-color relative">
           <div className="section_dotss dots_11"></div>
           <div className="section_dotss dots_22"></div>
@@ -21,8 +21,8 @@ return (
           <p>yirik kompaniyalarda bizning bitiruvchilar mavjud</p>
         </div>
       </div>
-      <div className="col-span-6">
-        <div className="maqsad_right flex justify-center items-center">
+      <div className="col-span-12 md:col-span-6">
+        <div className="maqsad_right p-5 my-5 md:m-0 flex justify-center items-center">
           <img src={Peoples} alt="" />
         </div>
       </div>

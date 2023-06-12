@@ -9,13 +9,32 @@ export default function index() {
     accessibility: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
   }
 
   return (
     <div className='container mx-auto px-4 place-self-auto'>
       <div className="comments">
-        <h3>Bitiruvchilarimizning <br /> muvaffaqiyatli  hikoyalari</h3>
-        <div className="flex">
+        <h3 className='text-2xl md:text-4xl text-center md:text-start'>Bitiruvchilarimizning <br /> muvaffaqiyatli  hikoyalari</h3>
+        <div className="flex px-14 md:px-0">
         <Slider {...settings}>
           <div className="comment_card">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit iusto id praesentium atque veniam est, ab suscipit? Velit accusamus, exercitationem nulla fugit modi beatae eaque.</p>

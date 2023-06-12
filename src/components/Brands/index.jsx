@@ -16,6 +16,7 @@ export default function Index() {
   }
   return (
     <div className='my-14'>
+      <h3 className='brand_title'>Bitiriuvchilarimiz <br /> zabt etgan <br /> kompaniyalar</h3>
       <Slider {...settings}>
           <div className="logo_card">
               <img className='' src={Img} alt="" />            

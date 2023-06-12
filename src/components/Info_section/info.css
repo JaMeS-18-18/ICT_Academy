@@ -11,3 +11,12 @@
   color: white;
   border-radius: 20px;
 }
+
+@media (max-width: 768px) {
+  .statistik {
+    font-size: 15px;
+    left: 10%;
+    width: 80%;
+    top: 50%;
+  }
+}
