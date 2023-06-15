@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Scrollbar, Pagination } from "swiper";
-
-import Img from '../../assets/images/RectangleLogo.png'
 import './Brand.css'
 import GetComments from '../../utils/GetComments';
 export default function Index() {
@@ -12,15 +10,14 @@ export default function Index() {
     kompaniya()
   }, []);
   async function kompaniya() {
-    const ress = await GetComments.Commnets()
-    console.log(ress);
-    let onlylogo = []
-    ress.map(item => {
-     if(item.company_logo) {
-      onlylogo.push(item)
-    } 
-  })
-  setCompany(onlylogo)
+    // let onlylogo = []
+    const result = await GetComments.Commnets()
+  //   result?.map(item => {
+  //    if(item.company_logo) {
+  //     onlylogo.push(item)
+  //   } 
+  // })
+  setCompany(result)
   }
   return (
     <div className='my-14'>
@@ -48,7 +45,7 @@ export default function Index() {
                   <img className='h-24' src={item?.company_logo} alt="" />            
                 </div>
                 <div>
-                  <h3 className="mentor_name">{item.company}</h3>
+                  <h3 className="mentor_name">{item?.company}</h3>
                 </div>
               </SwiperSlide>
             ))}
