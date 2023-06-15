@@ -5,9 +5,9 @@ import './News.css'
 export default function News() {
   const [Yangilik, setYangilik] = useState([]);
   useEffect(() => {
-    News()
+    Newss()
   }, []);
- async function News() {
+ async function Newss() {
     const result = await GetArtivcle.Article()
     setYangilik(result)
   }
