@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Scrollbar, Pagination } from "swiper";
-import GetComments from '../../utils/GetComments';
+
+import Img from '../../assets/images/RectangleLogo.png'
 import './Brand.css'
+import GetComments from '../../utils/GetComments';
 export default function Index() {
   const [Company, setCompany] = useState([]);
 
@@ -11,8 +13,9 @@ export default function Index() {
   }, []);
   async function kompaniya() {
     const ress = await GetComments.Commnets()
+    console.log(ress);
     let onlylogo = []
-   ress.length > 0 && ress.map(item => {
+    ress.map(item => {
      if(item.company_logo) {
       onlylogo.push(item)
     } 
