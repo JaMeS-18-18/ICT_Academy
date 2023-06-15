@@ -6,7 +6,7 @@
 
 .section_mentor {
   width: 100%;
-  height: 800px;
+  height: 865px;
   border-radius: 40px;
   color: white;
   padding: 2rem 3rem;
@@ -23,6 +23,7 @@
 
 .card_carusel {
   width: 250px;
+  margin: 0 auto;
   height: 400px;
   background-color: #86B6FF;
   border-radius: 20px;  
@@ -32,6 +33,10 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.carusel {
+  height: 650px;
+  /* background-color: red; */
+}
 
 .card-border {
   width: 100%;
@@ -39,7 +44,7 @@
   border-radius: 20px;  
   border: 2px solid black;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: end;
   padding: 1rem 0;
 }
@@ -89,29 +94,35 @@
   right: 2%;
 }
 
-
-.slick-next {
-  top: 110%;
-  left: 50%;
-  width: 50px;
-}
-
 .slick-next:before, .slick-prev:before {
   font-size: 48px;
   color: #fff;
 }
-
-
 
 .slick-next::after, .slick-prev::after {
   font-size: 48px;
   color: #fff;
 }
 
+.slick-track {
+  width: 4030px !important;
+}
 
-.slick-prev {
-  top: 110%;
-  left: 40% !important;
+
+.swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 99;
 }
 
 @media (max-width:768px) {
@@ -121,5 +132,11 @@
   .section_mentor_txt {
     font-size: 20px;
     text-align: center;
+  }
+  .swiper-button-prev {
+    left: 35%;
+  }
+  .swiper-button-next{
+    left: 65%;
   }
 }

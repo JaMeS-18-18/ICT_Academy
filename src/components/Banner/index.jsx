@@ -1,9 +1,10 @@
 import React from 'react'
-import BannerImage from '../../assets/images/Mask group (1).png'
 import { motion as m } from 'framer-motion'
 import './banner.css'
+import BannerImage from '../../assets/images/Mask group (1).png'
 
 export default function index() {
+  
   return (
     <m.div 
     initial={{ opacity: "0"}}

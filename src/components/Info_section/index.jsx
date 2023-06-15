@@ -1,8 +1,8 @@
 import React from 'react'
-import { CertificateIcon, GraduetesIcon, LifeChangeIcon, MyFileIcon } from '../../assets/icons'
-import SectionImage from '../../assets/images/Rectangle 5.png'
-import './info.css'
 import { motion as m } from 'framer-motion'
+import SectionImage from '../../assets/images/Rectangle 5.png'
+import { CertificateIcon, GraduetesIcon, LifeChangeIcon, MyFileIcon } from '../../assets/icons'
+import './info.css'
 
 export default function index() {
 return (

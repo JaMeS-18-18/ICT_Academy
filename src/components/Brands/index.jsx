@@ -1,39 +1,57 @@
-import React from 'react'
-import Img from '../../assets/images/RectangleLogo.png'
-import Img2 from '../../assets/images/googlelogo_color_272x92dpGoogle.png'
-import Img3 from '../../assets/images/Без названия (1)WK.png'
-import Img4 from '../../assets/images/Без названияYandex.png'
-import Img5 from '../../assets/images/logo-1549293917-751701datasite.png'
-import Slider from "react-slick";
+import React, { useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Scrollbar, Pagination } from "swiper";
+import GetComments from '../../utils/GetComments';
 import './Brand.css'
 export default function Index() {
-  let settings = {
-    className: 'sample',
-    accessibility: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    // dots: true
+  const [Company, setCompany] = useState([]);
+
+  useEffect(() => {
+    kompaniya()
+  }, []);
+  async function kompaniya() {
+    const ress = await GetComments.Commnets()
+    let onlylogo = []
+    ress.map(item => {
+     if(item.company_logo) {
+      onlylogo.push(item)
+    } 
+  })
+  setCompany(onlylogo)
   }
   return (
     <div className='my-14'>
       <h3 className='brand_title'>Bitiriuvchilarimiz <br /> zabt etgan <br /> kompaniyalar</h3>
-      <Slider {...settings}>
-          <div className="logo_card">
-              <img className='' src={Img} alt="" />            
-          </div>
-          <div className="logo_card">
-              <img className='' src={Img2} alt="" />            
-          </div>
-          <div className="logo_card">
-              <img className='' src={Img3} alt="" />            
-          </div>
-          <div className="logo_card">
-              <img className='' src={Img5} alt="" />            
-          </div>
-          <div className="logo_card">
-              <img className='' src={Img4} alt="" />            
-          </div>
-        </Slider>
+      <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={{
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+          }}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          {Company.length > 0 &&
+            Company.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="logo_card">
+                  <img className='h-24' src={item?.company_logo} alt="" />            
+                </div>
+                <div>
+                  <h3 className="mentor_name">{item.company}</h3>
+                </div>
+              </SwiperSlide>
+            ))}
+          {/* <div className="swiper-button-prev"><RightCarouselIcon /></div> */}
+          {/* <div className="swiper-button-next"><LeftCarouselIcon /></div> */}
+        </Swiper>
     </div>
   )
 }

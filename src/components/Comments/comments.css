@@ -11,8 +11,9 @@
 .comment_card {
   margin: 2rem 2rem 2rem 0;
   width: 250px !important; 
-  height: auto;
+  height: 350px;
   background-color: white;
   border-radius: 20px;
   padding: 1rem;
+  display: grid;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {InstagramIcon, LinkedinIcon, LongArrowIcon, YoutubeIcon} from '../../assets/images/Index'
 import './footer.css'
 export default function index() {
@@ -20,43 +21,50 @@ return (
         <span className='mx-5 text-xl'>Bizning servislarimiz</span>
       </div>
       <div className="col-span-12 order-2 md:order-1 md:col-span-3">
-        <div className='flex justify-between my-5 me-5  items-center'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>ICT IT Academy </span>
-          <LongArrowIcon />
-        </div>
+        <Link to={'/Courses'}>
+          <div className='flex justify-between my-5 me-5  items-center'>
+            <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Kurslar </span>
+            <LongArrowIcon />
+          </div>
+        </Link>
         <div className='hr'></div>
-        <div className='flex justify-between my-5 me-5  items-center'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>ICT IT Academy </span>
+<Link to={'/Portfolio'}>
+<div className='flex justify-between my-5 me-5  items-center'>
+          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Portfolio </span>
           <LongArrowIcon />
         </div>
+</Link>
         <div className='hr'></div>
+        <Link to={'/About'}>
         <div className='flex justify-between my-5 me-5  items-center'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>ICT IT Academy </span>
+          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Biz Haqimizda </span>
           <LongArrowIcon />
         </div>
+        </Link>
         <div className='hr'></div>
 
       <div className='flex justify-between m-auto my-5 cursor-pointer'>
-        <InstagramIcon/>
+        <a href="https://www.instagram.com/ictacademy_uz/"><InstagramIcon/></a>
         <LinkedinIcon/>
-        <YoutubeIcon/>
+        <a href="https://www.youtube.com/@ictacademy4799"><YoutubeIcon/></a>
       </div>
       </div>
       <div className="col-span-12 md:col-span-3 order-1">
-        <div className='flex justify-between my-5 me-5'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Biz haqimizda </span>
+       <Link to={'/News'} >
+       <div className='flex justify-between my-5 me-5'>
+          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Yangiliklar </span>
           <LongArrowIcon />
         </div>
+       </Link>
         <div className='hr'></div>
 
         <div className='flex justify-between my-5 me-5'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Biz bilan aloqa </span>
+          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '><a href="tel:99895-143-00-13">Biz bilan aloqa</a> </span>
           <LongArrowIcon />
         </div>
         <div className='hr'></div>
       </div>
     </div>
-    
   </div>
 </div>
 )
