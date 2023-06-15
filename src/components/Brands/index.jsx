@@ -12,7 +12,7 @@ export default function Index() {
   async function kompaniya() {
     const ress = await GetComments.Commnets()
     let onlylogo = []
-    ress.map(item => {
+   ress.length > 0 && ress.map(item => {
      if(item.company_logo) {
       onlylogo.push(item)
     } 
