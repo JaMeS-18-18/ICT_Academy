@@ -1,1 +1,1 @@
-export const BaseUrl = 'https://shabbada.me/api/v1';
+export const BaseUrl = 'https://actacademy.uz/api/v1';
