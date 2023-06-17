@@ -19,7 +19,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AnimatePresence initial={true}  mode="wait">
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home/>}/>
@@ -32,7 +31,6 @@ root.render(
             <Route path="/Portfolio_info/:id" element={<AboutPortfolio/>}/>
           </Route> 
         </Routes>
-      </AnimatePresence>
     </BrowserRouter>
   </React.StrictMode>
 );

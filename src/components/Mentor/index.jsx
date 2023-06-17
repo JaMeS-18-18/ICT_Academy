@@ -15,6 +15,8 @@ export default function SliderExample() {
     const AllTeacher = await GetMentors.Mentors()
     setTeachers(AllTeacher)
   }
+
+
   return (
     <div className="container mx-auto px-4 place-self-auto">
       <div className="section_mentor bg-bg_black place-content-between">

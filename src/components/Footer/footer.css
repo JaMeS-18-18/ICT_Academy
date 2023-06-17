@@ -2,12 +2,11 @@
   width: 100%;
   height: auto;
   color: white;
-  border-radius: 40px;
+  /* border-radius: 40px; */
 }
 
 .footer_link {
   font-size: 16px;
-  cursor: pointer;
 }
 
 .hr {

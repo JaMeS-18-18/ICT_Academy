@@ -4,8 +4,14 @@ import GetAbout from '../../utils/GetAbout'
 import Logo from '../../assets/images/ICT academy-01s.png'
 import { EmailIcon, LocationIcon, PhonrIcon } from '../../assets/icons'
 import './About.css'
+import PostCourse from '../../utils/PostCourse'
 export default function About() {
   const [Biz, setBiz] = useState({});
+  const [Name, SetName] = useState('')
+  const [Phone, SetPhone] = useState('')
+  const [Message, SetMessage] = useState('')
+  const [Status, setStatus] = useState(false)
+  const [Status2, setStatus2] = useState(false)
   useEffect(() => {
     AboutUS()
   }, []);
@@ -13,7 +19,57 @@ export default function About() {
     const result = await GetAbout.About()
     setBiz(result[0])
   }
+
+  const  SendMessage = async() => {
+    let message = {
+      full_name: Name,
+      phone: Phone,
+    }
+    const result = await PostCourse.Course(message)
+    SetName('')
+    SetPhone('')
+    if(result == 201) {
+      setStatus2(true) 
+      setTimeout(() => {
+      setStatus2(false)
+    }, 1000); 
+  }
+    if(result == 400){
+      setStatus(true)
+      setTimeout(() => {
+        setStatus(false)
+      }, 2000); 
+    }  
+  }
+
+
+
+
   return (
+  <>
+    {
+      Status && <div id="alert-border-2" style={{zIndex:999999, left: "10px", top: "10px"}} className="flex fixed p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
+      <svg className="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+      <div className="ml-3 text-sm font-medium">
+        Iltimos hamma maydonlarni to'gri to'ldiring
+      </div>
+      <button type="button" className="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-2" aria-label="Close">
+        <span className="sr-only">Dismiss</span>
+        <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+    }
+    {
+     Status2 && <div id="alert-border-3"style={{zIndex:999999, left: "10px", top: "10px"}} className="flex  fixed left-80 p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
+      <div class="ml-3 text-sm font-medium">
+        Arizangiz Muvofaqqiyatli Jo'natildi
+      </div>
+      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
+        <span class="sr-only">Dismiss</span>
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+    }
     <div className='container mx-auto px-4 place-self-auto'>
       <div className="grid grid-cols-12 my-24">
         <div className="col-span-12 md:col-span-6 text-center">
@@ -41,32 +97,29 @@ export default function About() {
       <h2 className='text-4xl font-semibold mb-5 mt-20'>Biz bilan aloqa</h2>
       <div className="contact bg-bg_gray">
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-6">
-          <div className=" my-10">
-            <div className="flex">
-              <LocationIcon/> <h3 className='mx-2 text-xl font-semibold'>Manzil</h3>
+        <div className="col-span-12">
+        <div className="">
+              <h2 className='text-4xl my-4 text-center font-semibold'></h2>
+              <div className="inputs">
+                <label className='block'>F.I.SH *</label>
+                <input onInput={(e) => SetName(e.target.value)} className='outline-primary border-bg_gray border-2' type="text" name="text" placeholder='F.I.SH' accept='false' />
+              </div>
+              <div className="inputs">
+                <label className='block'>Telefon Raqam *</label>
+                <input onInput={(e) => SetPhone(e.target.value)}  className='outline-primary border-bg_gray border-2' type="number" name="text" placeholder='Telefon Raqam' />
+              </div>
+            <div className="inputs">
+              <label className='block'>Sizning habaringiz *</label>
+              <textarea onInput={(e) => SetMessage(e.target.value)}  className='outline-primary border-bg_gray border-2 rounded-xl' type="email" name="text" placeholder='yozing...' cols={47} rows={4} />
             </div>
-            <p>Yunusobod tumani, Bodomzor mahallasi, 34-uy</p>
-          </div>
-          <div className=" my-10">
-            <div className="flex">
-              <PhonrIcon/> <h3 className='mx-2 text-xl font-semibold'>Telefon</h3>
+              <div className="flex justify-center">
+                <button onClick={SendMessage} className='bg-primary text-white w-44 h-16 rounded-full mx-5'>Ariza Jo'natish</button>
+              </div>
             </div>
-            <p>+988 95 143 00 13</p>
-          </div>
-          <div className=" my-10">
-            <div className="flex">
-              <EmailIcon/> <h3 className='mx-2 text-xl font-semibold'>Manzil</h3>
-            </div>
-            <p>ictacademy@gmail.com</p>
-          </div>
-
-        </div>
-        <div className="col-span-12 md:col-span-6">
-        <iframe title='Ict-Academy' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.5498396505905!2d69.28872207530173!3d41.34040117130588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef3db2b06783b%3A0x84660e201e025d7a!2sICT%20ACADEMY!5e0!3m2!1suz!2s!4v1686311857254!5m2!1suz!2s" width="100%" height="100%" style={{borderRadius: "30px"}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       </div>
     </div>
+  </>
   )
 }

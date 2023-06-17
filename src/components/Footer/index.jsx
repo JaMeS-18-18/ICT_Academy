@@ -2,68 +2,55 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {InstagramIcon, LinkedinIcon, LongArrowIcon, YoutubeIcon} from '../../assets/images/Index'
 import './footer.css'
+import { EmailIcon, LocationIcon, PhonrIcon } from '../../assets/icons'
 export default function index() {
 return (
-<div className='container mx-auto px-4 place-self-auto my-7'>
-  <div className="footer p-10 bg-bg_black">
+<div className='mt-7'>
+  <div className="footer p-10 bg-bg_black ">
+    <div className="md:container md:mx-auto md:px-4 md:place-self-auto">
     <div className='flex items-end'>
-      <h3 style={{width: "30%"}} className='text-xl md:text-3xl font-semibold'>ICT IT Academy</h3>
-      <div style={{width: "80%"}}>
-        <div className='hidden md:inline-flex hr'></div>
-      </div>
     </div>
     <div className="grid grid-cols-12 gap-3 ">
       <div className="col-span-12 md:col-span-3 my-5">
-        <p className=' text-bg_gray footer_link hover:text-primary transition ease-in-out delay-100  w-48'>Biz sizga dasturlash soxasida karierangizni boshlashingizga va olgan
-          bilimlaringizni mustaxkamlashingiz uchun yordam beramiz.</p>
+      <h3  className='text-xl md:text-3xl my-4 font-semibold'>ICT IT Academy</h3>
+        <span className=' text-bg_gray footer_link hover:text-primary transition ease-in-out delay-100'>Biz sizga dasturlash soxasida karierangizni boshlashingizga va olgan bilimlaringizni mustaxkamlashingiz uchun yordam beramiz.Biz sizga dasturlash soxasida karierangizni boshlashingizga va olgan bilimlaringizni mustaxkamlashingiz uchun yordam beramiz.</span>
       </div>
-      <div className="col-span-12 md:col-span-3 my-5">
-        <span className='mx-5 text-xl'>Bizning servislarimiz</span>
-      </div>
-      <div className="col-span-12 order-2 md:order-1 md:col-span-3">
-        <Link to={'/Courses'}>
-          <div className='flex justify-between my-5 me-5  items-center'>
-            <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Kurslar </span>
-            <LongArrowIcon />
-          </div>
-        </Link>
-        <div className='hr'></div>
-<Link to={'/Portfolio'}>
-<div className='flex justify-between my-5 me-5  items-center'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Portfolio </span>
-          <LongArrowIcon />
-        </div>
-</Link>
-        <div className='hr'></div>
-        <Link to={'/About'}>
-        <div className='flex justify-between my-5 me-5  items-center'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Biz Haqimizda </span>
-          <LongArrowIcon />
-        </div>
-        </Link>
-        <div className='hr'></div>
-
-      <div className='flex justify-between m-auto my-5 cursor-pointer'>
-        <a href="https://www.instagram.com/ictacademy_uz/"><InstagramIcon/></a>
+      {/* <div className="col-span-12 md:col-span-4 my-5">
+        <div className="text-center text-l md:text-xl my-5 font-semibold">
+        <p>Biz ijtimoiy tarmoqlarda</p>
+        <div className='flex justify-around items-center h-full m-auto my-5 cursor-pointer'>
+        <a className='mx-3' href="https://www.instagram.com/ictacademy_uz/"><InstagramIcon/></a>
         <LinkedinIcon/>
-        <a href="https://www.youtube.com/@ictacademy4799"><YoutubeIcon/></a>
-      </div>
-      </div>
-      <div className="col-span-12 md:col-span-3 order-1">
-       <Link to={'/News'} >
-       <div className='flex justify-between my-5 me-5'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '>Yangiliklar </span>
-          <LongArrowIcon />
+        <a className='mx-3' href="https://www.youtube.com/@ictacademy4799"><YoutubeIcon/></a>
         </div>
-       </Link>
-        <div className='hr'></div>
+      </div>
+      </div> */}
+      <div className="col-span-12 md:col-span-4">
+          <div className=" my-10">
+            <div className="flex">
+              <LocationIcon color={'white'}/> <h3 className='mx-2 text-xl font-semibold'>Manzil</h3>
+            </div>
+            <p>Yunusobod tumani, Bodomzor mahallasi, 34-uy</p>
+          </div>
+          <div className=" my-10">
+            <div className="flex">
+              <PhonrIcon color={'white'}/> <h3 className='mx-2 text-xl font-semibold'>Telefon</h3>
+            </div>
+            <p>+988 95 143 00 13</p>
+          </div>
+          <div className=" my-10">
+            <div className="flex">
+              <EmailIcon color={'white'}/> <h3 className='mx-2 text-xl font-semibold'>Manzil</h3>
+            </div>
+            <p>ictacademy@gmail.com</p>
+          </div>
 
-        <div className='flex justify-between my-5 me-5'>
-          <span className='footer_link hover:text-primary transition ease-in-out delay-100 '><a href="tel:99895-143-00-13">Biz bilan aloqa</a> </span>
-          <LongArrowIcon />
         </div>
-        <div className='hr'></div>
-      </div>
+      <div className="col-span-12 md:col-span-5 pt-4">
+      <p className='my-5 text-xl text-center text-xl md:text-xl font-semibold'>Bizning Manzil</p>
+        <iframe title='Ict-Academy' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.5498396505905!2d69.28872207530173!3d41.34040117130588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef3db2b06783b%3A0x84660e201e025d7a!2sICT%20ACADEMY!5e0!3m2!1suz!2s!4v1686311857254!5m2!1suz!2s" width="100%" height="300px" style={{borderRadius: "30px"}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
     </div>
   </div>
 </div>

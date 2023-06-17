@@ -28,12 +28,12 @@ useEffect(() => {
   }
 return (
 <m.div>
-  <header className='container mx-auto px-4 place-self-auto my-10'>
+  <header className=' my-10'>
     <div className="header bg-bg_black">
-      <div className="">
+      <div className="container mx-auto px-4 place-self-auto">
         <p className='text-bg_gray mb-5 text-xs'>Biz bilan zamonaviy kasblarni o’rganing, tajriba oshiring, mutaxassis
           bo’ling va karierangizni boshlang!</p>
-        <h2 className='head_title'>ICT IT-academy bilan zamonaviy kasblar mutaxassisi bo’ling</h2>
+        <h2 className='head_title'>ICT-academy bilan zamonaviy kasblar mutaxassisi bo’ling</h2>
         <div className="grid md:flex justify-center items-center my-10">
           <Link to={'/Courses'}>
           <button className='flex kurslar_btn my-2 bg-primary p-4 mx-4 rounded-full'>

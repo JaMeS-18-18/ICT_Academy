@@ -30,7 +30,7 @@ export default function Index() {
             Kategoriyalar.length > 0 && Kategoriyalar.map(item => {
               return (
                 <>
-                <button onClick={() => {Category(item.id)}} className={item.id == ActiveCourse ? 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary  bg-primary text-white' : 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 hover:bg-primary  '}>{item.category}</button>
+                <button onClick={() => {Category(item.id)}} className={item.id == ActiveCourse ? 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary  bg-primary my-2 text-white' : 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 hover:bg-primary my-2  '}>{item.category}</button>
                 </>
               )
             })
@@ -44,7 +44,7 @@ export default function Index() {
         {
           Kurslar.length > 0 && Kurslar.map(item => {
             return (
-              <div className="col-span-12 px-3 md:p-0 md:col-span-4 my-7">
+              <div className="col-span-12 px-5 md:p-0 md:col-span-6 lg:col-span-4 my-7">
                 <Link to={`/InfoCourse/${item.id}`}>
                 <div className="kurs_card cursor-pointer hover:bg-primary">
                   <h4 className='text-3xl font-semibold'>{item.name}</h4>

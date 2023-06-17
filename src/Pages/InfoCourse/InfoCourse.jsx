@@ -13,8 +13,8 @@ export default function InfoCourse() {
   const [Status2, setStatus2] = useState(false)
   const [Name, SetName] = useState('')
   const [Phone, SetPhone] = useState('')
-  const cancelButtonRef = useRef(null)
   const [Kurs, setKurs] = useState({});
+  const cancelButtonRef = useRef(null)
   const {id} = useParams()
 
   useEffect(() => {

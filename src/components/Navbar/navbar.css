@@ -20,6 +20,11 @@ li {
   font-size: 18px;
 }
 
+.phone_logo {
+  width: 26px;
+  height: 26px;
+  transform: rotate(-20deg);
+}
 
 
 .nav_btn {

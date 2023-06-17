@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/images/ICT academy-01.png'
-import { PhonrIcon } from '../../assets/icons'
+import Phone from '../../assets/images/phone.png'
 import './navbar.css'
 export default function Navbar() {
   const [Active, setActive] = useState(localStorage.getItem("count") || 0);
@@ -11,13 +11,16 @@ export default function Navbar() {
   }
   return (
     <div className='container mx-auto px-4 place-self-auto'>
-      <nav class="bg-transparent dark:bg-gray-900  w-full z-20 top-0 left-0  border-gray-200 dark:border-gray-600">
+      <nav class="dark:bg-gray-900   border-gray-200 dark:border-gray-600 fixed bg-border-color top-0 left-0 w-full " style={{zIndex: 9999}}>
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a onClick={() => NavBar(0)} href="/" class="flex items-center">
-            <img src={Logo} class="h-8 mr-3" alt="Flowbite Logo" />
+            <img src={Logo} class="h-8 mr-3" alt="ICt Logo" />
           </a>
           <div class="flex md:order-2">
-            <PhonrIcon /> <button type="button" className="text-primary font-bold mx-3">+998 95 143 00 13</button>
+            <div className="mt-2 md:mt-0">
+            <a href="tel:+998951430013"><img className='phone_logo' src={Phone} alt="" /></a>
+            </div>
+             <button type="button" className="text-primary font-bold mx-3"><a href="tel:+998951430013">+998 95 143 00 13</a></button>
             <button data-collapse-toggle="navbar-sticky" type="button"
               class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-sticky" aria-expanded="false">
