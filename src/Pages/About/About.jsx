@@ -5,6 +5,7 @@ import Logo from '../../assets/images/ICT academy-01s.png'
 import { EmailIcon, LocationIcon, PhonrIcon } from '../../assets/icons'
 import './About.css'
 import PostCourse from '../../utils/PostCourse'
+import PostMessage from '../../utils/PostMessage'
 export default function About() {
   const [Biz, setBiz] = useState({});
   const [Name, SetName] = useState('')
@@ -20,14 +21,17 @@ export default function About() {
     setBiz(result[0])
   }
 
-  const  SendMessage = async() => {
+  const SendMessage = async() => {
     let message = {
       full_name: Name,
       phone: Phone,
+      body: Message,
     }
-    const result = await PostCourse.Course(message)
+    const result = await PostMessage.Message(message)
     SetName('')
     SetPhone('')
+    SetMessage('')
+    console.log(result);
     if(result == 201) {
       setStatus2(true) 
       setTimeout(() => {
@@ -72,8 +76,8 @@ export default function About() {
     }
     <div className='container mx-auto px-4 place-self-auto'>
       <div className="grid grid-cols-12 my-24">
-        <div className="col-span-12 md:col-span-6 text-center">
-          <img className='h-100' src={Biz.image} alt="" />
+        <div className="col-span-12 md:col-span-6 text-center px-5">
+          <img className='biz-image' src={Biz.image} alt="" />
           <h4 className='text-2xl mt-6 font-semibold'>{Biz.director}</h4>
           <p className='text-xl'>{Biz.director_pos}</p>
         </div>
@@ -102,15 +106,15 @@ export default function About() {
               <h2 className='text-4xl my-4 text-center font-semibold'></h2>
               <div className="inputs">
                 <label className='block'>F.I.SH *</label>
-                <input onInput={(e) => SetName(e.target.value)} className='outline-primary border-bg_gray border-2' type="text" name="text" placeholder='F.I.SH' accept='false' />
+                <input autoComplete='off' onInput={(e) => SetName(e.target.value)} className='outline-primary border-bg_gray border-2' type="text" name="text" placeholder='F.I.SH' accept='false' />
               </div>
               <div className="inputs">
                 <label className='block'>Telefon Raqam *</label>
-                <input onInput={(e) => SetPhone(e.target.value)}  className='outline-primary border-bg_gray border-2' type="number" name="text" placeholder='Telefon Raqam' />
+                <input autoComplete='off' onInput={(e) => SetPhone(e.target.value)}  className='outline-primary border-bg_gray border-2' type="number" name="text" placeholder='Telefon Raqam' />
               </div>
             <div className="inputs">
               <label className='block'>Sizning habaringiz *</label>
-              <textarea onInput={(e) => SetMessage(e.target.value)}  className='outline-primary border-bg_gray border-2 rounded-xl' type="email" name="text" placeholder='yozing...' cols={47} rows={4} />
+              <textarea autoComplete='off' onInput={(e) => SetMessage(e.target.value)}  className='outline-primary border-bg_gray border-2 rounded-xl' type="email" name="text" placeholder='yozing...' cols={47} rows={4} />
             </div>
               <div className="flex justify-center">
                 <button onClick={SendMessage} className='bg-primary text-white w-44 h-16 rounded-full mx-5'>Ariza Jo'natish</button>

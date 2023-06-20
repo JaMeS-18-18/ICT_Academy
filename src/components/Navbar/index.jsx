@@ -36,6 +36,10 @@ export default function Navbar() {
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul
               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 transition-all md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <div onClick={() => NavBar(0)}>
+             <Link to={'/'}> <li className={Active == 0 ? 'text-primary hover:text-primary my-1 transition ease-in-out delay-150' : 'hover:text-primary my-1 transition ease-in-out delay-150'}>Asosiy</li>
+              </Link>
+             </div>
              <div onClick={() => NavBar(1)}>
              <Link to={'/Courses'}> <li className={Active == 1 ? 'text-primary hover:text-primary my-1 transition ease-in-out delay-150' : 'hover:text-primary my-1 transition ease-in-out delay-150'}>Kurslar</li>
               </Link>
@@ -54,7 +58,6 @@ export default function Navbar() {
              <Link to={'/News'}> <li className={Active == 4 ? 'text-primary hover:text-primary my-1 transition ease-in-out delay-150' : 'hover:text-primary my-1 transition ease-in-out delay-150'}>Yangiliklar</li>
               </Link>
              </div>
-              <li className='text-primary'>Ict Works</li>
             </ul>
           </div>
         </div>

@@ -28,10 +28,9 @@
   background-color: #86B6FF;
   border-radius: 20px;  
   padding: 0.5rem;
-  background-image: url('../../assets/images/man_PNG6533.png');
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .carusel {
   height: 650px;

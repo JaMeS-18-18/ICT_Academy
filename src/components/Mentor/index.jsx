@@ -45,7 +45,8 @@ export default function SliderExample() {
             Teachers.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="carusel">
-                  <div className="card_carusel">
+                  <div style={{backgroundImage: `url(${item.image})`}}  className="card_carusel">
+                {/* */}
                     <div className="flex card-border">
                     <a className={item.github ? "me-5" : "d-none"} href={item.github}>
                       <GitHubIcon />
