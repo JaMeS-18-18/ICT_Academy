@@ -10,11 +10,11 @@ export default function Navbar() {
     localStorage.setItem("count", count)
   }
   return (
-    <div className='container mx-auto px-4 place-self-auto'>
+    <div className='container px-4 mx-auto place-self-auto'>
       <nav class="dark:bg-gray-900   border-gray-200 dark:border-gray-600 fixed bg-border-color top-0 left-0 w-full " style={{zIndex: 9999}}>
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class=" container flex flex-wrap items-center justify-between mx-auto p-4">
           <a onClick={() => NavBar(0)} href="/" class="flex items-center">
-            <img src={Logo} class="h-8 mr-3" alt="ICt Logo" />
+            <img src={Logo} style={{objectFit: "contain"}} class="h-auto w-auto  mr-3" alt="ICt Logo" />
           </a>
           <div class="flex md:order-2">
             <div className="mt-2 md:mt-0">
@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 transition-all md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              class=" nav_ul flex w-full justify-between flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 transition-all md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <div onClick={() => NavBar(0)}>
              <Link to={'/'}> <li className={Active == 0 ? 'text-primary hover:text-primary my-1 transition ease-in-out delay-150' : 'hover:text-primary my-1 transition ease-in-out delay-150'}>Asosiy</li>
               </Link>

@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.00c13868.css",
-    "main.js": "/static/js/main.7def2fef.js",
+    "main.css": "/static/css/main.9db15380.css",
+    "main.js": "/static/js/main.6ab7e64e.js",
     "static/media/Rectangle 5.png": "/static/media/Rectangle 5.a53ea28827be21d6f01b.png",
     "static/media/Mask group (3).png": "/static/media/Mask group (3).2d8cee0fbad46fb03812.png",
-    "static/media/man_PNG6533.png": "/static/media/man_PNG6533.027a6a6efcc0f672c8b4.png",
     "static/media/Frame 33916.png": "/static/media/Frame 33916.57af2a518d3156e2ac0f.png",
     "static/media/Mask group (1).png": "/static/media/Mask group (1).4c8cbf1bcde15d4c1ea0.png",
     "static/media/phone.png": "/static/media/phone.7bd6f5324d6daa8abbf2.png",
     "static/media/ICT academy-01s.png": "/static/media/ICT academy-01s.34b0cf3eaf7d29978898.png",
     "static/media/Sphere-Green-Glossy.png": "/static/media/Sphere-Green-Glossy.7a6bbc737e745bbd1c66.png",
     "index.html": "/index.html",
-    "main.00c13868.css.map": "/static/css/main.00c13868.css.map",
-    "main.7def2fef.js.map": "/static/js/main.7def2fef.js.map"
+    "main.9db15380.css.map": "/static/css/main.9db15380.css.map",
+    "main.6ab7e64e.js.map": "/static/js/main.6ab7e64e.js.map"
   },
   "entrypoints": [
-    "static/css/main.00c13868.css",
-    "static/js/main.7def2fef.js"
+    "static/css/main.9db15380.css",
+    "static/js/main.6ab7e64e.js"
   ]
 }
