@@ -42,6 +42,10 @@ li {
 }
 
 
+.active {
+  color: #20CE94 !important;
+}
+
 @media (max-width: 768px) {
   .nav {
     display: block;
