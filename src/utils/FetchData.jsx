@@ -1,1 +1,1 @@
-export const BaseUrl = 'https://ictacademy.uz/api/v1';
+export const BaseUrl = 'https://api.ictacademy.uz/api/v1';

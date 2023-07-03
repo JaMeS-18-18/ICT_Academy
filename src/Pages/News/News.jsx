@@ -12,7 +12,7 @@ export default function News() {
     setYangilik(result)
   }
 return (
-<div className='container mx-auto px-4 place-self-auto'>
+<div className='container mx-auto px-4 place-self-auto py-2'>
   <div className="News">
     <h2 className='text-xl md:text-4xl font-semibold my-4 md:my-10'>Yangiliklar</h2>
     <div className="grid grid-cols-12">

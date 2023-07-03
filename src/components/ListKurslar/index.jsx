@@ -24,7 +24,7 @@ export default function Index() {
   return (
     <div>
       <div className="">
-        <h3 className='mt-10 md:mt-20 mb-10 text-2xl md:text-4xl font-semibold'>Kurslarimiz ro'yxati</h3>
+        {/* <h3 className='mt-10 md:mt-20 mb-10 text-2xl md:text-4xl font-semibold'>Kurslarimiz ro'yxati</h3> */}
         <div className="kurs_btn_card grid grid-cols-12  md:flex justify-between items-center">
           {
             Kategoriyalar.length > 0 && Kategoriyalar.map(item => {

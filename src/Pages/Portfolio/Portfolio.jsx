@@ -21,7 +21,7 @@ export default function Portfolio() {
   }
   return (
     <div className='container mx-auto px-4 place-self-auto my-7'>
-      <h2 className='text-5xl font-semibold mt-24 mb-14'>Loyihalarimiz</h2>
+      <h2 className='text-5xl font-semibold mt-28 mb-14'>Loyihalarimiz</h2>
       {/* <div className="flex w-96 justify-evenly md:justify-between md:my-10">
         <div className="">
           <h6 className='text-2xl font-semibold'>20+</h6>

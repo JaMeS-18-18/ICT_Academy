@@ -75,9 +75,9 @@ export default function About() {
     </div>
     }
     <div className='container mx-auto px-4 place-self-auto'>
-      <div className="grid grid-cols-12 my-24">
+      <div className="grid grid-cols-12 my-36">
         <div className="col-span-12 md:col-span-6 text-center px-5">
-          <img className='biz-image' src={Biz.image} alt="" />
+          <img className='biz-image' src={Biz.image ?? ''} alt="" />
           <h4 className='text-2xl mt-6 font-semibold'>{Biz.director}</h4>
           <p className='text-xl'>{Biz.director_pos}</p>
         </div>
@@ -86,6 +86,7 @@ export default function About() {
           <p className='md:text-xl'>{Biz.body}</p>
         </div>
       </div>
+
       <Mentor/>
 
       <h2 className='text-2xl md:text-4xl font-semibold mt-28 mb-5'>Faoliyatimiz</h2>
