@@ -43,7 +43,6 @@
   border-radius: 20px;  
   border: 2px solid black;
   display: flex;
-  justify-content: start;
   align-items: end;
   padding: 1rem 0;
 }

@@ -19,7 +19,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <Routes>
+       <div className="w-screen h-screen flex flex-col">
+       <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home/>}/>
             <Route path="/Courses" element={<Kurslar/>}/>
@@ -31,6 +32,7 @@ root.render(
             <Route path="/Portfolio_info/:id" element={<AboutPortfolio/>}/>
           </Route> 
         </Routes>
+       </div>
     </BrowserRouter>
   </React.StrictMode>
 );
