@@ -6,7 +6,6 @@ import App from "./App";
 import {Route, Routes, BrowserRouter} from 'react-router-dom'
 import Kurslar from "./Pages/Kurslar/Kurslar";
 import Home from "./Pages/Home/Home";
-import { AnimatePresence } from "framer-motion";
 import InfoCourse from "./Pages/InfoCourse/InfoCourse";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import About from "./Pages/About/About";

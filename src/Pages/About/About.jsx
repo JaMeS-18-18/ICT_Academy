@@ -74,14 +74,14 @@ export default function About() {
       </button>
     </div>
     }
-    <div className='container mx-auto px-4 place-self-auto'>
-      <div className="grid grid-cols-12 my-36">
-        <div className="col-span-12 md:col-span-6 text-center px-5">
+    <div className='container mx-auto  place-self-auto'>
+      <div className="grid grid-cols-12 lg:my-36 px-4">
+        <div className="col-span-12 lg:col-span-6 text-center lg:px-5">
           <img className='biz-image' src={Biz.image ?? ''} alt="" />
           <h4 className='text-2xl mt-6 font-semibold'>{Biz.director}</h4>
           <p className='text-xl'>{Biz.director_pos}</p>
         </div>
-        <div className="col-span-12 md:col-span-6">
+        <div className="col-span-12 lg:col-span-6 my-24 lg:m-0">
           <h2 className='text-2xl md:text-4xl font-semibold mt-10 mb-3 md:my-3'>{Biz.title}</h2>
           <p className='md:text-xl'>{Biz.body}</p>
         </div>
@@ -89,19 +89,19 @@ export default function About() {
 
       <Mentor/>
 
-      <h2 className='text-2xl md:text-4xl font-semibold mt-28 mb-5'>Faoliyatimiz</h2>
+      <h2 className='text-2xl md:text-4xl font-semibold mt-28 mb-5 px-4'>Faoliyatimiz</h2>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-6">
+        <div className="col-span-12 lg:col-span-6 mb-5 px-4">
           <p className='md:text-xl mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sed asperiores doloremque quo ipsum maxime dignissimos aspernatur possimus, doloribus rerum non, cum quasi dolor eos impedit! Voluptatum, placeat minus. Ipsa voluptas dicta provident magnam incidunt accusamus dolores nobis ex, eveniet voluptatibus saepe, voluptatum, natus veritatis excepturi tempore consequuntur vel architecto ut consectetur voluptates quod ipsum ad fugit? A corrupti quaerat nulla modi praesentium adipisci magni odio blanditiis illo quasi similique explicabo cupiditate, commodi eos maxime eaque pariatur.</p>
         </div>
-        <div className="col-span-12 md:col-span-6 flex items-center justify-center">
+        <div className="col-span-12 lg:col-span-6 flex items-center justify-center px-4">
           <img className='w-50 h-50' src={Logo} alt="" />
         </div>
       </div>
 
-      <h2 className='text-4xl font-semibold mb-5 mt-20'>Biz bilan aloqa</h2>
+      <h2 className='text-4xl font-semibold mb-5 mt-20 px-4'>Biz bilan aloqa</h2>
       <div className="contact bg-bg_gray">
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12 ">
         <div className="col-span-12">
         <div className="">
               <h2 className='text-4xl my-4 text-center font-semibold'></h2>

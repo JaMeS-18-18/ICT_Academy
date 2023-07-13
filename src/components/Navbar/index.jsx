@@ -12,9 +12,9 @@ export default function Navbar() {
   return (
     <div className='container px-4 mx-auto place-self-auto'>
       <nav class="dark:bg-gray-900   border-gray-200 dark:border-gray-600 fixed bg-border-color top-0 left-0 w-full " style={{ zIndex: 9999 }}>
-        <div class=" container flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class=" md:container flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center">
-            <img src={Logo} style={{ objectFit: "contain" }} class="w-16 md:h-auto md:w-auto  mr-3" alt="ICt Logo" />
+            <img src={Logo} style={{ objectFit: "contain" }} class="w-[70px] lg:h-auto lg:w-auto  mr-3" alt="ICt Logo" />
           </a>
           <div class="flex md:order-2">
             <div className="mt-2 md:mt-0">

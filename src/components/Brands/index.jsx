@@ -42,10 +42,8 @@ export default function Index() {
             Company.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="logo_card">
-                  <img className='h-24' src={item?.company_logo} alt="" />            
-                </div>
-                <div>
-                  <h3 className="mentor_name">{item?.company}</h3>
+                  <img className='h-24 w-25' src={item?.company_logo} alt="" />            
+                  <span className="text-xl">{item?.company}</span>
                 </div>
               </SwiperSlide>
             ))}

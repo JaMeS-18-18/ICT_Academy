@@ -10,10 +10,12 @@ import { ArrowIcon } from '../../assets/images/Index'
 import AnimateImg from '../../assets/images/Sphere-Green-Glossy.png'
 import AnimateImgBody from '../../assets/images/Vector 4.png'
 import './Home.css'
+import GetAbout from '../../utils/GetAbout'
 
 export default function Home() {
 const [Kategoriyalar, setKategoriyalar] = useState([]);
 const [Kurslar, setKurslar] = useState([]);
+const [About, setAbout] = useState([]);
 const [ActiveCourse, setActiveCourse] = useState(1);
 
 useEffect(() => {
@@ -21,6 +23,8 @@ useEffect(() => {
 }, []);
   async function Category(id) {
     const CourseCategory = await Courses.CourseCategory()
+    const AboutInfo = await GetAbout.About()
+    setAbout(AboutInfo[0])
     setKategoriyalar(CourseCategory)
     const Course = await Courses.CourseCategoryChild(id)
     setKurslar(Course)
@@ -28,12 +32,11 @@ useEffect(() => {
   }
 return (
 <m.div>
-  <header className=' my-10'>
+  <header className='my-10'>
     <div className="header bg-bg_black">
       <div className="container mx-auto px-4 place-self-auto">
-        <p className='text-bg_gray mb-5 text-xs'>Biz bilan zamonaviy kasblarni o’rganing, tajriba oshiring, mutaxassis
-          bo’ling va karierangizni boshlang!</p>
-        <h2 className='head_title'>ICT-academy bilan zamonaviy kasblar mutaxassisi bo’ling</h2>
+        <p className='text-bg_gray mb-5 text-xs'>{About.main_subtitle}</p>
+        <h2 className='head_title'>{About.main_title}</h2>
         <div className="grid md:flex justify-center items-center my-10">
           <Link to={'/Courses'}>
           <button className='flex kurslar_btn my-2 bg-primary p-4 mx-4 rounded-full'>
@@ -46,7 +49,7 @@ return (
   </header>
   <section className='container mx-auto px-4 place-self-auto my-20'>
     <div className="">
-      <h3 className='yonalish_txt '> IT soxasidagi 4 xil yo’nalishda 17 xil <br /> kurslarimiz mavjud </h3>
+      <h3 className='yonalish_txt '> IT soxasidagi {About.courses} xil yo’nalishda {About.course_directions} xil <br /> kurslarimiz mavjud </h3>
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:col-span-5">
           {

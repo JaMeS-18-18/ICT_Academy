@@ -18,7 +18,7 @@ export default function SliderExample() {
 
 
   return (
-    <div className="container mx-auto px-4 place-self-auto">
+    <div className="container mx-auto md:px-4 place-self-auto">
       <div className="section_mentor bg-bg_black place-content-between">
         <div className="section_dots dots_1"></div>
         <div className="section_dots dots_2"></div>

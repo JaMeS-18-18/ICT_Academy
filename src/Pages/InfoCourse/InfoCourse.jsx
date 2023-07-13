@@ -79,7 +79,7 @@ return (
 <div className='container mx-auto px-4 place-self-auto py-16'>
   <h2 className='info_title text-3xl text-center md:text-4xl mt-5 mb-12'>{Kurs.name }</h2>
   <div className="grid grid-cols-12 gap-3">
-    <div className="col-span-12 p-2 md:col-span-3">
+    <div className="col-span-12 p-2 md:col-span-6 lg:col-span-3">
       <div className="info_card  bg-bg_gray">
         <div className="round_info">
           <h3>{Kurs.course_length} oy</h3>
@@ -90,7 +90,7 @@ return (
         </div>
       </div>
     </div>
-    <div className="col-span-12 p-2 md:col-span-3">
+    <div className="col-span-12 p-2 md:col-span-6 lg:col-span-3">
       <div className="info_card bg-bg_gray">
         <div className="round_info">
           <h3>{Kurs.modules}</h3>
@@ -101,7 +101,7 @@ return (
         </div>
       </div>
     </div>
-    <div className="col-span-12 p-2 md:col-span-3">
+    <div className="col-span-12 p-2 md:col-span-6 lg:col-span-3">
       <div className="info_card bg-bg_gray">
         <div className="round_info">
           <h3>{Kurs.lessons}</h3>
@@ -112,7 +112,7 @@ return (
         </div>
       </div>
     </div>
-    <div className="col-span-12 p-2 md:col-span-3">
+    <div className="col-span-12 p-2 md:col-span-6 lg:col-span-3">
       <div className="info_card bg-bg_gray">
         <div className="round_info">
           <h3><DoneIcon/></h3>
