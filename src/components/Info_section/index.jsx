@@ -22,14 +22,14 @@ return (
   <div className="grid grid-cols-12">
     <m.div className="col-span-12 lg:col-span-4">
      <div className="grid grid-cols-12">
-     <m.div  className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-12'>
+     <m.div  className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-6'>
         <GraduetesIcon />
         <div style={{width: "100%"}} className="ms-5 ps-5 text-start ">
           <m.h4 initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}}  className='text-xl font-semibold'>{About?.graduates} muvaffaqiyatli bitiruvchi</m.h4>
           <m.p initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}} className='text-l text-secondary'>IT sohasida o’z o’rniga ega</m.p>
         </div>
       </m.div>
-      <m.div className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-12 '>
+      <m.div className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-6 '>
         <CertificateIcon />
         <div style={{width: "100%"}} className="ms-5 ps-5 text-start overflow-hidden">
           <m.h4 initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}} className='text-xl font-semibold'>
@@ -38,14 +38,14 @@ return (
             Rezyume uchun plyus</m.p>
         </div>
       </m.div>
-      <div className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-12'>
+      <div className='flex col-span-12 md:col-span-6 lg:col-span-12 items-center my-4 md:my-6'>
         <MyFileIcon />
         <div style={{width: "100%"}} className="ms-5 ps-5 text-start ">
           <m.h4 initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}} className='text-xl font-semibold'>Ishga joylashish kafolati</m.h4>
           <m.p  initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}} className='text-l text-secondary'>O'rganish orqali pul topish</m.p>
         </div>
       </div>
-      <div className='flex col-span-12 md:col-span-6 lg:col-span-12 my-4 md:my-12' style={{width: "100%"}}
+      <div className='flex col-span-12 md:col-span-6 lg:col-span-12 my-4 md:my-6' style={{width: "100%"}}
 >
         <LifeChangeIcon />
         <div style={{width: "100%"}} className="ms-5 ps-5 text-start ">
