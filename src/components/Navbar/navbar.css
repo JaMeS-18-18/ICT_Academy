@@ -18,13 +18,38 @@
 
 
 .nav_ul {
-  width: 700px;
+  width: 600px;
   max-width: 100%;
+  @media (max-width: 1065px) {
+    width: 450px;
+  }
   /* background-color: red; */
+
 }
 
 li {
-  font-size: 18px;
+  font-size: 16px;
+  @media (max-width: 1065px) {
+    font-size: 14px;
+  }
+}
+
+.response_nav {
+  display: none;
+  @media (max-width: 860px) {
+    display: flex;
+  }
+}
+
+.response_nav2 {
+  display: flex;
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+
+.navv_btn {
+  font-size: 15px;
 }
 
 

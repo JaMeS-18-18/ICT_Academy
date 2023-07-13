@@ -6,7 +6,6 @@ import App from "./App";
 import {Route, Routes, BrowserRouter} from 'react-router-dom'
 import Kurslar from "./Pages/Kurslar/Kurslar";
 import Home from "./Pages/Home/Home";
-import { AnimatePresence } from "framer-motion";
 import InfoCourse from "./Pages/InfoCourse/InfoCourse";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import About from "./Pages/About/About";
@@ -19,7 +18,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <Routes>
+       <div className="w-screen h-screen flex flex-col">
+       <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home/>}/>
             <Route path="/Courses" element={<Kurslar/>}/>
@@ -31,6 +31,7 @@ root.render(
             <Route path="/Portfolio_info/:id" element={<AboutPortfolio/>}/>
           </Route> 
         </Routes>
+       </div>
     </BrowserRouter>
   </React.StrictMode>
 );

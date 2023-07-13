@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Courses from '../../utils/GetApi'
-import { ArrowIcon} from '../../assets/images/Index'
+import { ArrowIcon, LeftCarouselIcon, RightCarouselIcon} from '../../assets/images/Index'
 import AnimateImg from '../../assets/images/Sphere-Green-Glossy.png'
 import AnimateImgBody from '../../assets/images/Vector 4.png'
 import './ListKurslar.css'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import { A11y, Navigation, Scrollbar, Pagination } from "swiper";
+
 
 export default function Index() {
   const [Kategoriyalar, setKategoriyalar] = useState([]);
@@ -25,16 +28,39 @@ export default function Index() {
     <div>
       <div className="">
         {/* <h3 className='mt-10 md:mt-20 mb-10 text-2xl md:text-4xl font-semibold'>Kurslarimiz ro'yxati</h3> */}
-        <div className="kurs_btn_card grid grid-cols-12  md:flex justify-between items-center">
+        <div className="my-5 h-28">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation={{
+            prevEl: '.swiper-button-prev2',
+            nextEl: '.swiper-button-next2',
+          }}
+          autoplay={true}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 5,
+            },
+          }}
+          style={{height: "100%"}}
+        >
           {
-            Kategoriyalar.length > 0 && Kategoriyalar.map(item => {
+            Kategoriyalar.length > 0 && Kategoriyalar.map((item,index) => {
               return (
                 <>
-                <button onClick={() => {Category(item.id)}} className={item.id == ActiveCourse ? 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary  bg-primary my-2 text-white' : 'kurs_btn col-span-6 md:col-span-3 border-primary border-2 hover:bg-primary my-2  '}>{item.category}</button>
+                <SwiperSlide key={index}>
+                <button onClick={() => {Category(item.id)}} className={item.id == ActiveCourse ? 'kurs_btn  border-primary border-2 active:bg-primary me-2 bg-primary my-2 text-white' : 'kurs_btn  border-primary border-2 hover:bg-primary my-2 '}>{item.category}</button>
+                </SwiperSlide>
                 </>
               )
             })
           }
+          <div className="swiper-button-prev2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAr0lEQVR4nO3UvWoCQRSG4cc/tBfSiEVARIRYLGksvA2b3IR1bBUVEbQI3q4srGCxo5JZt3Hfct7imzNnzqGi4gkSTAKuhR+RfGGHWo5rYI/PmIAhNqjnuPTsgFFMwABHNHNcWtUK45iAfnbLUMA669O/6eEP7YBf4jsm4AMndAL+FzORnNENuCkWCuBRJcsiKimlJ6X9rtLm5Hbit6+c+NJ215XkztOkW3gecBXvyAWabBOXDqOb2wAAAABJRU5ErkJggg=="/></div>
+          <div className="swiper-button-next2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArUlEQVR4nO3UOwrCQBSF4c/nBqxsIoKICIraiBuxcRPuQAtFRHyAhduVQAqRJAiZNJK/nFP8c5g7l4qKD9ZoSWeMhQBEuKGZktVwxDyEaIAHGhmiQ9KqMEOcUE/J4rMrRiFEE5yT238Tt7ygH0I0wy4jiwfkiV4I0TJH1MYd3RCiLVYZWQevEE32OU0eRZuU/iaTsqdrWPY/GZT946MfdtdCQTY5W3gaagtX/DlvYj0TlCevqpgAAAAASUVORK5CYII="/></div>
+        </Swiper>
         {/* <button className='kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary my-5 mx-2 md:m-0 bg-primary-light text-primary active:text-black'>Foundation</button>
         <button className='kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary  bg-primary-light text-primary active:text-black'>Mutaxassislik</button>
         <button className='kurs_btn col-span-6 md:col-span-3 border-primary border-2 active:bg-primary my-5 mx-2 md:m-0 bg-primary-light text-primary active:text-black'>English IT</button> */}
@@ -44,7 +70,7 @@ export default function Index() {
         {
           Kurslar.length > 0 && Kurslar.map(item => {
             return (
-              <div className="col-span-12 px-5 md:p-0 md:col-span-6 lg:col-span-4 my-7">
+              <div className="col-span-12 px-5 md:p-0 md:col-span-6 lg:col-span-4 mt-2 mb-7">
                 <Link to={`/InfoCourse/${item.id}`}>
                 <div className="kurs_card cursor-pointer hover:bg-primary">
                   <h4 className='text-3xl font-semibold'>{item.name}</h4>

@@ -191,6 +191,7 @@ export const InstagramIcon = () => (
   </svg>
 );
 
+
 export const LinkedInIcon = () => (
   <svg
     width="36"

@@ -12,10 +12,12 @@ body {
   background-color: #F5F5F5;
   user-select: none;
   overflow-x: hidden;
-  margin: 5rem 0 0 0;
+  margin: 3rem 0 0 0;
+  flex-direction: column;
 }
 
 input {
   outline-color: none !important;
 }
+
 

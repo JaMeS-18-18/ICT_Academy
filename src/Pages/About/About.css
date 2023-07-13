@@ -3,6 +3,10 @@
   height: auto;
   padding: 2rem;
   border-radius: 40px;
+
+  @media (max-width: 576px) {
+    border-radius: 0;
+  }
 }
 
 .biz-image {

@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="">
       <Navbar/>
-      <Outlet/>
+      <main className='flex-auto'>
+        <Outlet/>
+      </main>
       <Footer/>
     </div>
   );

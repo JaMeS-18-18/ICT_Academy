@@ -12,6 +12,11 @@
   padding: 2rem 3rem;
   margin: 2rem 0;
   position: relative;
+
+  @media (max-width: 576px) {
+    border-radius: 0;
+    /* position: static; */
+  }
 }
 
 .section_mentor_txt {
@@ -43,7 +48,6 @@
   border-radius: 20px;  
   border: 2px solid black;
   display: flex;
-  justify-content: start;
   align-items: end;
   padding: 1rem 0;
 }
