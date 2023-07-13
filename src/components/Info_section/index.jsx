@@ -53,6 +53,7 @@ return (
           <m.p initial={{y: "200%"}} animate={{y:0}} transition={{duration: 0.75}} className='text-l text-secondary'>Sizning va bizning asosiy maqsadimiz</m.p>
         </div>
       </div>
+      
      </div>
     </m.div>
     <div className="col-span-12 lg:col-span-8 mb-16 flex justify-center items-center relative">
