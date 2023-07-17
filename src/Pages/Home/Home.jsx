@@ -49,7 +49,7 @@ return (
   </header>
   <section className='container mx-auto px-4 place-self-auto my-20'>
     <div className="">
-      <h3 className='yonalish_txt '> IT soxasidagi {About.courses} xil yo’nalishda {About.course_directions} xil <br /> kurslarimiz mavjud </h3>
+      <h3 className='yonalish_txt '> IT soxasidagi {About.courses} ta yo’nalishda {About.course_directions} xil <br /> kurslarimiz mavjud </h3>
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:col-span-5">
           {
