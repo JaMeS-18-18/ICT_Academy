@@ -21,7 +21,7 @@ export default function Index() {
   }
   return (
     <div className='my-14'>
-      <h3 className='brand_title'>Bitiriuvchilarimiz <br /> zabt etgan <br /> kompaniyalar</h3>
+      <h3 className='brand_title'>Bitiriuvchilarimiz zabt etgan <br /> kompaniyalar</h3>
       <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
