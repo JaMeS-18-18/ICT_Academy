@@ -19,7 +19,7 @@ export default function About() {
  async function AboutUS() {
     const result = await GetAbout.About()
     setBiz(result[0])
-  }
+  }  
 
   const SendMessage = async() => {
     let message = {
@@ -33,7 +33,7 @@ export default function About() {
     SetMessage('')
     console.log(result);
     if(result == 201) {
-      setStatus2(true) 
+      setStatus2(true)
       setTimeout(() => {
       setStatus2(false)
     }, 1000); 

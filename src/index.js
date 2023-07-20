@@ -27,7 +27,7 @@ root.render(
             <Route path="/Portfolio" element={<Portfolio/>}/>
             <Route path="/About" element={<About/>}/>
             <Route path="/News" element={<News/>}/>
-            <Route path="/News_info/:id" element={<News_info/>}/>
+            <Route path="/News_info" element={<News_info/>}/>
             <Route path="/Portfolio_info/:id" element={<AboutPortfolio/>}/>
           </Route> 
         </Routes>

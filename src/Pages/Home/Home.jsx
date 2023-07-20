@@ -35,8 +35,8 @@ return (
   <header className='my-10'>
     <div className="header bg-bg_black">
       <div className="container mx-auto px-4 place-self-auto">
-        <p className='text-bg_gray mb-5 text-xs'>{About.main_subtitle}</p>
-        <h2 className='head_title'>{About.main_title}</h2>
+        <p className='text-bg_gray mb-5 text-xs'>{About?.main_subtitle}</p>
+        <h2 className='head_title'>{About?.main_title}</h2>
         <div className="grid md:flex justify-center items-center my-10">
           <Link to={'/Courses'}>
           <button className='flex kurslar_btn my-2 bg-primary p-4 mx-4 rounded-full'>
@@ -49,7 +49,7 @@ return (
   </header>
   <section className='container mx-auto px-4 place-self-auto my-20'>
     <div className="">
-      <h3 className='yonalish_txt '> IT soxasidagi {About.courses} ta yo’nalishda {About.course_directions} xil <br /> kurslarimiz mavjud </h3>
+      <h3 className='yonalish_txt '> IT soxasidagi {About?.courses} ta yo’nalishda {About?.course_directions} xil <br /> kurslarimiz mavjud </h3>
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:col-span-5">
           {

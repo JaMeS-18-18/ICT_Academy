@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import {useLocation, useNavigate } from 'react-router-dom'
 import GetArtivcle from '../../utils/GetArtivcle'
 import './News_info.css'
 export default function News_info() {
-  const {id} = useParams()
   const [Yangilik, setYangilik] = useState([]);
   const [OneYangilik, setOneYangilik] = useState({});
+  const navigate = useNavigate()
+  const location = useLocation()
+
   useEffect(() => {
-    News()
+    News(location.state)
   }, []);
- async function News() {
+ async function News(id) {
     const result = await GetArtivcle.Article()
     const result2 = await GetArtivcle.Article(id)
     setYangilik(result)
@@ -40,9 +42,7 @@ export default function News_info() {
                 <img className='' src={item.image} alt="" />
                 <h5 className='text-xl md:text-2xl mt-5 mb-2 font-semibold'>{item.title.slice(0,19)}...</h5>
                 <p className='text-l'>{item.description.slice(0, 250)}...</p>
-                <Link to={`/News_info/${item.id}`}>
-                <button className='text-l text-white mt-5 bg-primary p-3 px-4 rounded-xl '>Batafsil</button>
-                </Link>
+                <button onClick={() => News(item.id)}  className='text-l text-white mt-5 bg-primary p-3 px-4 rounded-xl '>Batafsil</button>
               </div>
             </div>
           )
