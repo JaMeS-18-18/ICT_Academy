@@ -1,12 +1,7 @@
 {
   "files": {
-<<<<<<< HEAD
     "main.css": "/static/css/main.2b565c1f.css",
-    "main.js": "/static/js/main.f51ec9a5.js",
-=======
-    "main.css": "/static/css/main.3a697f24.css",
-    "main.js": "/static/js/main.f15850dd.js",
->>>>>>> cef7a0b2abf6815433ee4f580d319c1cff68ca87
+    "main.js": "/static/js/main.6254e458.js",
     "static/media/Rectangle 5.png": "/static/media/Rectangle 5.a53ea28827be21d6f01b.png",
     "static/media/Mask group (3).png": "/static/media/Mask group (3).2d8cee0fbad46fb03812.png",
     "static/media/Frame 33916.png": "/static/media/Frame 33916.57af2a518d3156e2ac0f.png",
@@ -15,20 +10,11 @@
     "static/media/ICT academy-01s.png": "/static/media/ICT academy-01s.34b0cf3eaf7d29978898.png",
     "static/media/Sphere-Green-Glossy.png": "/static/media/Sphere-Green-Glossy.7a6bbc737e745bbd1c66.png",
     "index.html": "/index.html",
-<<<<<<< HEAD
     "main.2b565c1f.css.map": "/static/css/main.2b565c1f.css.map",
-    "main.f51ec9a5.js.map": "/static/js/main.f51ec9a5.js.map"
+    "main.6254e458.js.map": "/static/js/main.6254e458.js.map"
   },
   "entrypoints": [
     "static/css/main.2b565c1f.css",
-    "static/js/main.f51ec9a5.js"
-=======
-    "main.3a697f24.css.map": "/static/css/main.3a697f24.css.map",
-    "main.f15850dd.js.map": "/static/js/main.f15850dd.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.3a697f24.css",
-    "static/js/main.f15850dd.js"
->>>>>>> cef7a0b2abf6815433ee4f580d319c1cff68ca87
+    "static/js/main.6254e458.js"
   ]
 }
