@@ -58,7 +58,7 @@ export default function AboutPortfolio() {
           <img className='w-50 h-50 pe-8 border-24' style={{height: "400px", width:"100%", objectFit: "cover"}} src={AboutProject?.product_image} alt="" />
         </div>
         <div className="col-span-12 md:col-span-6">
-          <p className='md:text-xl mb-5'>{AboutProject?.requirements?.slice(0, 850)}</p>
+          <p className='md:text-xl mb-5'>{AboutProject?.requirements}</p>
         </div>
       </div>
     </div>

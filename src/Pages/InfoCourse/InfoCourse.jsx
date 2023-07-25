@@ -76,7 +76,7 @@ return (
   </button>
 </div>
 }
-<div className='container mx-auto px-4 place-self-auto py-16'>
+   <div className='container mx-auto px-4 place-self-auto py-16'>
   <h2 className='info_title text-3xl text-center md:text-4xl mt-5 mb-12'>{Kurs.name }</h2>
   <div className="grid grid-cols-12 gap-3">
     <div className="col-span-12 p-2 md:col-span-6 lg:col-span-3">
@@ -129,15 +129,9 @@ return (
   </div>
   <div className="mt-10">
     <h2 className='text-2xl md:text-4xl font-semibold my-5'>Batafsil</h2>
-    <p className='md:text-xl'>{Kurs?.description?.slice(0, 700)}</p>
+    <p className='md:text-xl'>{Kurs?.description}</p>
   </div>
-
-
-
-
-
-
-  <Transition.Root show={open} as={Fragment}>
+    <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
         <Transition.Child
           as={Fragment}
@@ -191,8 +185,7 @@ return (
         </div>
       </Dialog>
     </Transition.Root>
-
-</div>
+   </div>
 </>
 )
 }
